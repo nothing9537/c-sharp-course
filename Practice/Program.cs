@@ -1,26 +1,19 @@
-﻿var accountState = new DailyAccountState(2000, 200);
-
-Console.WriteLine(accountState.EndOfDayState);
-Console.WriteLine(accountState.Report);
-
+﻿Console.WriteLine(NumberToDayOfWeekTranslator.Translate(1));
 Console.ReadKey();
-
-public class DailyAccountState
+public static class NumberToDayOfWeekTranslator
 {
-    public int InitialState { get; }
-
-    public int SumOfOperations { get; }
-
-    public DailyAccountState(int initialState, int sumOfOperations)
+    public static string Translate(int day)
     {
-        InitialState = initialState;
-        SumOfOperations = sumOfOperations;
+        return day switch
+        {
+            1 => "Monday",
+            2 => "Tuesday",
+            3 => "Wednesday",
+            4 => "Thursday",
+            5 => "Friday",
+            6 => "Saturday",
+            7 => "Sunday",
+            _ => "Invalid day of the week",
+        };
     }
-
-    public int EndOfDayState => InitialState + SumOfOperations;
-    public string Report => $"Day: {DateTime.Now.Day}, " +
-        $"month: {DateTime.Now.Month}, " +
-        $"year: {DateTime.Now.Year}, " +
-        $"initial state: {InitialState}, " +
-        $"end of day state: {EndOfDayState}";
 }
