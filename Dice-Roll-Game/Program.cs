@@ -4,6 +4,6 @@ var random = new Random();
 var game = new DiceGame(random, 6, 3);
 
 GameResult gameResult =  game.Play();
+game.PrintGameResult(gameResult);
 
-Console.WriteLine(gameResult == GameResult.Victory ? "You win! :)" : "You loss :(");
 Console.ReadKey();
