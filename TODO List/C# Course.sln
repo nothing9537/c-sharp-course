@@ -5,11 +5,13 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO List", "TODO List.csproj", "{8ACDAAA3-08D4-493B-9304-0B8018800BD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People", "..\People\People.csproj", "{9C8884C8-ECC9-49BB-8069-034BB902B544}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "People", "..\People\People.csproj", "{9C8884C8-ECC9-49BB-8069-034BB902B544}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle", "..\Rectangle\Rectangle.csproj", "{C6034E5E-086C-4392-9322-D69DC14BEB13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rectangle", "..\Rectangle\Rectangle.csproj", "{C6034E5E-086C-4392-9322-D69DC14BEB13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "..\Practice\Practice.csproj", "{FD9CF8D8-3F9D-4786-95CE-B50DA552249C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice", "..\Practice\Practice.csproj", "{FD9CF8D8-3F9D-4786-95CE-B50DA552249C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Names_SRP", "..\Names\Names_SRP.csproj", "{5B96C600-BEA8-47A9-A3FF-27C262266787}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FD9CF8D8-3F9D-4786-95CE-B50DA552249C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD9CF8D8-3F9D-4786-95CE-B50DA552249C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD9CF8D8-3F9D-4786-95CE-B50DA552249C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
