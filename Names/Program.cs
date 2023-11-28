@@ -6,6 +6,8 @@ var names = new Names();
 var path = new NamesFilePathBuilder().BuildFilePath();
 var stringsTexttualRepository = new StringsTextualRepository();
 
+Stopwatch stopwatch = Stopwatch.StartNew();
+
 if (File.Exists(path))
 {
     Console.WriteLine("Names file already exists. Loading names.");
@@ -28,5 +30,9 @@ else
 }
 
 Console.WriteLine(new NamesFormatter().Format(names.AllNames));
+
+stopwatch.Stop();
+
+Console.WriteLine($"Execution time in ms: {stopwatch.ElapsedMilliseconds}");
 
 Console.ReadLine();

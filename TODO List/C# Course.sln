@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice", "..\Practice\Pra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Names_SRP", "..\Names\Names_SRP.csproj", "{5B96C600-BEA8-47A9-A3FF-27C262266787}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollGame", "..\Dice-Roll-Game\DiceRollGame.csproj", "{183F5583-E524-4782-BC8C-FDD400A6A604}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B96C600-BEA8-47A9-A3FF-27C262266787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183F5583-E524-4782-BC8C-FDD400A6A604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183F5583-E524-4782-BC8C-FDD400A6A604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183F5583-E524-4782-BC8C-FDD400A6A604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183F5583-E524-4782-BC8C-FDD400A6A604}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
