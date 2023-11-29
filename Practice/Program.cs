@@ -1,46 +1,57 @@
-﻿public class Exercise
+﻿var app = new Exercise();
+var stringsList = new List<string> { "bobcat", "wolverine", "grizzly" };
+var result = app.ProcessAll(stringsList);
+
+foreach (var item in result)
 {
-    public List<int> GetCountsOfAnimalsLegs()
+    Console.WriteLine(item);
+}
+
+Console.ReadKey();
+
+public class Exercise
+{
+    public List<string> ProcessAll(List<string> words)
     {
-        var animals = new List<Animal>
+        var stringsProcessors = new List<StringsProcessor>
             {
-                new Lion(),
-                new Tiger(),
-                new Duck(),
-                new Spider()
+                new StringsTrimmingProcessor(),
+                new StringsUppercaseProcessor()
             };
 
-        var result = new List<int>();
+        List<string> result = words;
 
-        foreach (var animal in animals)
+        foreach (var stringsProcessor in stringsProcessors)
         {
-            result.Add(animal.NumberOfLegs);
+            result = stringsProcessor.Process(result);
         }
 
         return result;
     }
 
-    public class Animal
+    class StringsProcessor
     {
-        public virtual int NumberOfLegs { get; set; } = 4;
+        public List<string> Process(List<string> words)
+        {
+            List<string> transformedStrings = [];
+
+            foreach (string item in words)
+            {
+                transformedStrings.Add(TransformHandler(item));
+            }
+
+            return transformedStrings;
+        }
+
+        public virtual string TransformHandler(string word) => word;
     }
 
-    public class Lion : Animal
+    class StringsTrimmingProcessor : StringsProcessor
     {
-
+        public override string TransformHandler(string word) => word.Substring(0, word.Length / 2);
     }
-
-    public class Tiger : Animal
+    class StringsUppercaseProcessor : StringsProcessor
     {
-
-    }
-
-    public class Duck : Animal
-    {
-        public override int NumberOfLegs { get; set; } = 2;
-    }
-    public class Spider : Animal
-    {
-        public override int NumberOfLegs { get; set; } = 8;
+        public override string TransformHandler(string word) => word.ToUpper();
     }
 }
