@@ -1,11 +1,22 @@
-﻿public class Ingredient
+﻿using Pizza.Extensions;
+
+string multilineString = @"this
+is
+a
+multi
+line
+string";
+
+Console.WriteLine(multilineString.LinesCount());
+
+public abstract class Ingredient
 {
     public virtual string Name { get; } = "Some ingredient";
 }
 
-public class Pizza : Ingredient
+public class PizzaFood : Ingredient
 {
-    private List<Ingredient> _ingridients = new List<Ingredient>();
+    private readonly List<Ingredient> _ingridients = new List<Ingredient>();
 
     public void AddIngredient(Ingredient ingridient) => _ingridients.Add(ingridient);
     public string Describe() => $"This is z pizza with {string.Join(", ", _ingridients)}";

@@ -11,13 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rectangle", "..\Rectangle\R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practice", "..\Practice\Practice.csproj", "{FD9CF8D8-3F9D-4786-95CE-B50DA552249C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Names_SRP", "..\Names\Names_SRP.csproj", "{5B96C600-BEA8-47A9-A3FF-27C262266787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Names_SRP", "..\Names\Names_SRP.csproj", "{5B96C600-BEA8-47A9-A3FF-27C262266787}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceRollGame", "..\Dice-Roll-Game\DiceRollGame.csproj", "{183F5583-E524-4782-BC8C-FDD400A6A604}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiceRollGame", "..\Dice-Roll-Game\DiceRollGame.csproj", "{183F5583-E524-4782-BC8C-FDD400A6A604}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "..\Pizza\Pizza.csproj", "{709267E0-DFFD-4A56-97A5-782911AFA869}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pizza", "..\Pizza\Pizza.csproj", "{709267E0-DFFD-4A56-97A5-782911AFA869}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "..\Calculator\Calculator.csproj", "{1B382402-FAD1-479A-A489-C191BF53684C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "..\Calculator\Calculator.csproj", "{1B382402-FAD1-479A-A489-C191BF53684C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

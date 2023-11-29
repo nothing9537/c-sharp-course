@@ -1,57 +1,58 @@
-﻿var app = new Exercise();
-var stringsList = new List<string> { "bobcat", "wolverine", "grizzly" };
-var result = app.ProcessAll(stringsList);
-
-foreach (var item in result)
+﻿public static class ExerciseShapes
 {
-    Console.WriteLine(item);
-}
-
-Console.ReadKey();
-
-public class Exercise
-{
-    public List<string> ProcessAll(List<string> words)
+    public static List<double> GetShapesAreas(List<Shape> shapes)
     {
-        var stringsProcessors = new List<StringsProcessor>
-            {
-                new StringsTrimmingProcessor(),
-                new StringsUppercaseProcessor()
-            };
+        var result = new List<double>();
 
-        List<string> result = words;
-
-        foreach (var stringsProcessor in stringsProcessors)
+        foreach (var shape in shapes)
         {
-            result = stringsProcessor.Process(result);
+            result.Add(shape.CalculateArea());
         }
 
         return result;
     }
+}
 
-    class StringsProcessor
+public abstract class Shape
+{
+    public abstract double CalculateArea();
+}
+
+public class Square : Shape
+{
+    public double Side { get; }
+
+    public Square(double side)
     {
-        public List<string> Process(List<string> words)
-        {
-            List<string> transformedStrings = [];
-
-            foreach (string item in words)
-            {
-                transformedStrings.Add(TransformHandler(item));
-            }
-
-            return transformedStrings;
-        }
-
-        public virtual string TransformHandler(string word) => word;
+        Side = side;
     }
 
-    class StringsTrimmingProcessor : StringsProcessor
+    public override double CalculateArea() => Side * Side;
+}
+
+
+public class Rectangle : Shape
+{
+    public double Width { get; }
+    public double Height { get; }
+
+    public Rectangle(double width, double height)
     {
-        public override string TransformHandler(string word) => word.Substring(0, word.Length / 2);
+        Width = width;
+        Height = height;
     }
-    class StringsUppercaseProcessor : StringsProcessor
+
+    override public double CalculateArea() => Width * Height;
+}
+
+public class Circle : Shape
+{
+    public double Radius { get; }
+
+    public Circle(double radius)
     {
-        public override string TransformHandler(string word) => word.ToUpper();
+        Radius = radius;
     }
+
+    override public double CalculateArea() => Math.PI * Math.Pow(Radius, 2);
 }
