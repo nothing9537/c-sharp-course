@@ -17,9 +17,10 @@ class StringsTextualRepository : BaseRepository
     {
         string dataToWrite = string.Join(',', ids);
         string fileData = File.ReadAllText(filePath);
+        var existingData = fileData.Split(_separator).ToList();
 
-        Console.WriteLine(fileData.Split(_separator));
+        existingData.Add(dataToWrite);
 
-        File.WriteAllText(filePath, dataToWrite);
+        File.WriteAllText(filePath, string.Join(_separator, existingData));
     }
 }
