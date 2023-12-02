@@ -1,23 +1,40 @@
-﻿var numbers = new List<int> {  };
-
-foreach (var item in numbers.TakeEverySecond())
+﻿public static class Exercise
 {
-    Console.WriteLine(item);
-}
-
-Console.ReadKey();
-
-public static class ListExtentions
-{
-    public static List<int> TakeEverySecond(this List<int> numbers)
+    public static int Transform(
+        int number)
     {
-        var result = new List<int>();
+        var transformations = new List<INumericTransformation>
+            {
+                new By1Incrementer(),
+                new By2Multiplier(),
+                new ToPowerOf2Raiser()
+            };
 
-        for (int i = 0; i < numbers.Count; i += 2)
+        var result = number;
+        foreach (var transformation in transformations)
         {
-            result.Add(numbers[i]);
+            result = transformation.Transform(result);
         }
-
         return result;
+    }
+
+    interface INumericTransformation
+    {
+        int Transform(int number);
+    }
+
+    class By1Incrementer : INumericTransformation
+    {
+        public int Transform(int number) => number + 1;
+    }
+
+    class By2Multiplier : INumericTransformation
+    {
+        public int Transform(int number) => number * 2;
+    }
+
+    class ToPowerOf2Raiser : INumericTransformation
+    {
+        public int Transform(int number) => number * number;
     }
 }
