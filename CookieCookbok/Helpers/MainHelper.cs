@@ -39,16 +39,50 @@ class MainHelper
                     : "Recipe added:"
                     );
 
-                _cookbook.DisplayReceipt();
+                DisplayReceipt(_cookbook.IngredientsId);
 
                 return _cookbook.IngredientsId;
             }
         };
     }
 
+    private void DisplayReceipt(List<int> ids)
+    {
+        foreach (var id in ids)
+        {
+            var ingredient = _cookbook.AvailableIngredients.Find(ingredient => ingredient.Id == id);
+            Console.WriteLine($"{ingredient?.Name}. {ingredient?.Instructions()}");
+        }
+    }
+
     public void WriteReceiptToFile(List<int> data)
     {
         _repository.Write(_filePath, data);
+    }
+
+    public void DisplayReceiptsFromFile()
+    {
+        var receipts = _repository.Read(_filePath);
+
+        if (receipts.Count != 0)
+        {
+            Console.WriteLine("Existing receipts are:\n");
+            for (int i = 0; i < receipts.Count; i++)
+            {
+                string receipt = receipts[i];
+                Console.WriteLine($"***** {i + 1} *****");
+
+                List<string> strIds = receipt.Split(",").ToList();
+
+                foreach (string id in strIds)
+                {
+                    var ingredient = _cookbook.AvailableIngredients.Find(ingredient => ingredient.Id == int.Parse(id));
+                    Console.WriteLine($"{ingredient?.Name}. {ingredient?.Instructions()}");
+                }
+
+                Console.WriteLine("\n");
+            }
+        }
     }
 }
 

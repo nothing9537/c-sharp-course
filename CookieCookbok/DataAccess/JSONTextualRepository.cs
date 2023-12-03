@@ -5,20 +5,24 @@ namespace CookieCookbok.DataAccess;
 
 class JSONTextualRepository : BaseRepository
 {
-    public override List<int> Read(string filePath)
+    public override List<string> Read(string filePath)
     {
-        var result = new List<int>();
-        var fileContent = File.ReadAllText(filePath);
+        if (File.Exists(filePath))
+        {
+            var fileContent = File.ReadAllText(filePath);
+            return JsonSerializer.Deserialize<List<string>>(fileContent)!;
+        }
 
-        Console.WriteLine(fileContent);
-        //return fileContent.Split(_separator).ToList();
-
-        return result;
+        return new List<string>();
     }
 
-    public override void Write(string filePath, List<int> data)
+    public override void Write(string filePath, List<int> ids)
     {
-        //var dataToJSON = JsonSerializer.Serialize(data);
-        //File.WriteAllText(filePath, string.Join(_separator, dataToJSON));
+        string dataToWrite = string.Join(',', ids);
+        var existingData = Read(filePath);
+
+        existingData.Add(dataToWrite);
+
+        File.WriteAllText(filePath, JsonSerializer.Serialize(existingData));
     }
 }

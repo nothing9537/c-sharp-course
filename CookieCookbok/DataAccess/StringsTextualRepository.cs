@@ -3,21 +3,19 @@ namespace CookieCookbok.DataAccess;
 
 class StringsTextualRepository : BaseRepository
 {
-    public override List<int> Read(string filePath)
+    public override List<string> Read(string filePath)
     {
-        List<int> list = new List<int>();
+        if (File.Exists(filePath))
+        {
+            return File.ReadAllText(filePath).Split(_separator).ToList();
+        }
 
-        var fileContent = File.ReadAllText(filePath);
-
-        //return fileContent.Split(_separator).ToList();
-
-        return list;
+        return new List<string>();
     }
     public override void Write(string filePath, List<int> ids)
     {
         string dataToWrite = string.Join(',', ids);
-        string fileData = File.ReadAllText(filePath);
-        var existingData = fileData.Split(_separator).ToList();
+        var existingData = Read(filePath);
 
         existingData.Add(dataToWrite);
 

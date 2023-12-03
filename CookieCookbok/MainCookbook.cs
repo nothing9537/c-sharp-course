@@ -31,20 +31,13 @@ class MainCookbook
 
     public void Init()
     {
+        _helper = new MainHelper(this, _readWriteFileFormat, _filePath);
+        _helper.DisplayReceiptsFromFile();
+
         DisplayAvailabelIngredients();
 
-        _helper = new MainHelper(this, _readWriteFileFormat, _filePath);
         var writeResult = _helper.WriteToCookbook();
         _helper.WriteReceiptToFile(writeResult);
-    }
-
-    public void DisplayReceipt()
-    {
-        foreach (var id in IngredientsId)
-        {
-            var ingredient = AvailableIngredients.Find(ingredient => ingredient.Id == id);
-            Console.WriteLine($"{ingredient?.Name}. {ingredient?.Instructions()}");
-        }
     }
 
     public void DisplayAvailabelIngredients()
