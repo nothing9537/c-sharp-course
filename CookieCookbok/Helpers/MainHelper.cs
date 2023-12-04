@@ -7,7 +7,7 @@ class MainHelper
 {
     private MainCookbook _cookbook;
     private ValidationHelper _validationHelper;
-    private BaseRepository _repository;
+    private IBaseRepository _repository;
     private string _filePath;
     public MainHelper(MainCookbook cookbook, FileFormat fileFormat, string filePath)
     {
@@ -67,18 +67,15 @@ class MainHelper
         if (receipts.Count != 0)
         {
             Console.WriteLine("Existing receipts are:\n");
+
             for (int i = 0; i < receipts.Count; i++)
             {
                 string receipt = receipts[i];
                 Console.WriteLine($"***** {i + 1} *****");
 
-                List<string> strIds = receipt.Split(",").ToList();
+                List<int> strIds = receipt.Split(",").ToList().ConvertAll(int.Parse);
 
-                foreach (string id in strIds)
-                {
-                    var ingredient = _cookbook.AvailableIngredients.Find(ingredient => ingredient.Id == int.Parse(id));
-                    Console.WriteLine($"{ingredient?.Name}. {ingredient?.Instructions()}");
-                }
+                DisplayReceipt(strIds);
 
                 Console.WriteLine("\n");
             }

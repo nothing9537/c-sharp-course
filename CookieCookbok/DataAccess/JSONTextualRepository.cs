@@ -3,9 +3,9 @@ using System.Text.Json;
 
 namespace CookieCookbok.DataAccess;
 
-class JSONTextualRepository : BaseRepository
+class JSONTextualRepository : IBaseRepository
 {
-    public override List<string> Read(string filePath)
+    public List<string> Read(string filePath)
     {
         if (File.Exists(filePath))
         {
@@ -16,7 +16,7 @@ class JSONTextualRepository : BaseRepository
         return new List<string>();
     }
 
-    public override void Write(string filePath, List<int> ids)
+    public void Write(string filePath, List<int> ids)
     {
         string dataToWrite = string.Join(',', ids);
         var existingData = Read(filePath);
