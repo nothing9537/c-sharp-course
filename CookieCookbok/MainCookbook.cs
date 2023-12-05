@@ -36,8 +36,8 @@ class MainCookbook
 
         DisplayAvailabelIngredients();
 
-        var writeResult = _helper.WriteToCookbook();
-        _helper.WriteReceiptToFile(writeResult);
+        _helper.ReadAndValidateUserInput();
+        _helper.WriteReceiptToFile(IngredientsId);
     }
 
     public void DisplayAvailabelIngredients()

@@ -19,7 +19,7 @@ class MainHelper
             : new StringsTextualRepository();
     }
 
-    public List<int> WriteToCookbook()
+    public void ReadAndValidateUserInput()
     {
         while (true)
         {
@@ -40,8 +40,6 @@ class MainHelper
                     );
 
                 DisplayReceipt(_cookbook.IngredientsId);
-
-                return _cookbook.IngredientsId;
             }
         };
     }
