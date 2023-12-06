@@ -1,19 +1,19 @@
-﻿public static class ExceptionsRethrowing
+﻿public class TransactionData
 {
-    public static int GetMaxValue(List<int> numbers)
+    public string Sender { get; init; }
+    public string Receiver { get; init; }
+    public decimal Amount { get; init; }
+}
+
+public class InvalidTransactionException : Exception
+{
+    public TransactionData TransactionData { get; }
+    public InvalidTransactionException() { }
+    public InvalidTransactionException(string message) : base(message) { }
+    public InvalidTransactionException(string message, Exception innerException) : base(message, innerException) { }
+    public InvalidTransactionException(string message, TransactionData transatctionData): base(message)
     {
-        try
-        {
-            return numbers.Max();
-        }
-        catch (ArgumentNullException)
-        {
-            throw new ArgumentNullException("The numbers list cannot be null.");
-        }
-        catch (InvalidOperationException ex)
-        {
-            Console.WriteLine("The numbers list cannot be empty.");
-            throw ex;
-        }
+        TransactionData = transatctionData;
     }
+    public InvalidTransactionException(string message, TransactionData transatctionData, Exception innerException): base(message, innerException) { }
 }
