@@ -1,40 +1,19 @@
-﻿public static class Exercise
+﻿public static class ExceptionsRethrowing
 {
-    public static int Transform(
-        int number)
+    public static int GetMaxValue(List<int> numbers)
     {
-        var transformations = new List<INumericTransformation>
-            {
-                new By1Incrementer(),
-                new By2Multiplier(),
-                new ToPowerOf2Raiser()
-            };
-
-        var result = number;
-        foreach (var transformation in transformations)
+        try
         {
-            result = transformation.Transform(result);
+            return numbers.Max();
         }
-        return result;
-    }
-
-    interface INumericTransformation
-    {
-        int Transform(int number);
-    }
-
-    class By1Incrementer : INumericTransformation
-    {
-        public int Transform(int number) => number + 1;
-    }
-
-    class By2Multiplier : INumericTransformation
-    {
-        public int Transform(int number) => number * 2;
-    }
-
-    class ToPowerOf2Raiser : INumericTransformation
-    {
-        public int Transform(int number) => number * number;
+        catch (ArgumentNullException)
+        {
+            throw new ArgumentNullException("The numbers list cannot be null.");
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine("The numbers list cannot be empty.");
+            throw ex;
+        }
     }
 }
