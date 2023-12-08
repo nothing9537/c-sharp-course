@@ -1,6 +1,7 @@
 ﻿namespace GameDataParser.Validator;
 
 using System.Text.Json;
+using GameDataParser.Entities;
 
 static class Validator
 {

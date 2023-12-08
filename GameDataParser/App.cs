@@ -1,4 +1,6 @@
 ﻿
+using GameDataParser.Entities;
+using GameDataParser.Helper;
 class App
 {
     private readonly AppHelper _helper;

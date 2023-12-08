@@ -1,4 +1,6 @@
-﻿public class VideoGame
+﻿namespace GameDataParser.Entities;
+
+public class VideoGame
 {
     public string Title { get; init; }
     public int ReleaseYear { get; init; }

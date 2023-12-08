@@ -2,6 +2,7 @@
 
 using System.Text.Json;
 using GameDataParser.Validator;
+using GameDataParser.Entities;
 
 class AppHelper
 {
@@ -29,7 +30,7 @@ class AppHelper
             var fileData = File.ReadAllText(userInputFileName);
 
             Console.WriteLine(fileData);
-            z
+
             return JsonSerializer.Deserialize<List<VideoGame>>(fileData);
         }
         else
