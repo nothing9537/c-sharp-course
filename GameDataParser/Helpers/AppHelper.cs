@@ -1,4 +1,7 @@
-﻿using System.Text.Json;
+﻿namespace GameDataParser.Helper;
+
+using System.Text.Json;
+using GameDataParser.Validator;
 
 class AppHelper
 {

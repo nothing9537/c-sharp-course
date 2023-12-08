@@ -1,4 +1,4 @@
-﻿using GameDataParser;
+﻿using GameDataParser.Logger;
 
 string logFilePath = "logs.log";
 
