@@ -1,22 +1,42 @@
-﻿public class TransactionData
-{
-    public string Sender { get; init; }
-    public string Receiver { get; init; }
-    public decimal Amount { get; init; }
-}
+﻿var numbers = new List<int> { 1, 2, 3, 7, 9, 15, -5, 0 };
+SimpleTuple<int, int> minAndMax = GetMinAndMax(numbers);
+Console.WriteLine($"Min in a collection is: {minAndMax.Item1}");
+Console.WriteLine($"Max in a collection is: {minAndMax.Item2}");
+Console.ReadKey();
 
-public class InvalidTransactionException : Exception
+SimpleTuple<int, int> GetMinAndMax(IEnumerable<int> input)
 {
-    public TransactionData TransactionData { get; }
-    public InvalidTransactionException() { }
-    public InvalidTransactionException(string message) : base(message) { }
-    public InvalidTransactionException(string message, Exception innerException) : base(message, innerException) { }
-    public InvalidTransactionException(string message, TransactionData transatctionData) : base(message)
+    if (!input.Any())
     {
-        TransactionData = transatctionData;
+        throw new InvalidOperationException("The input cannot be empty.");
     }
-    public InvalidTransactionException(string message, TransactionData transatctionData, Exception innerException) : base(message, innerException)
+
+    int min = input.First();
+    int max = input.First();
+
+    foreach (var number in input)
     {
-        TransactionData = transatctionData;
+        if (number > max)
+        {
+            max = number;
+        }
+
+        if (number < min)
+        {
+            min = number;
+        }
+    }
+
+    return new SimpleTuple<int, int>(min, max);
+}
+class SimpleTuple<T1, T2>
+{
+    public T1 Item1;
+    public T2 Item2;
+
+    public SimpleTuple(T1 item1, T2 item2)
+    {
+        Item1 = item1;
+        Item2 = item2;
     }
 }
