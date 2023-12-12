@@ -1,12 +1,16 @@
 ﻿var numbers = new List<int> { 1, 2, 3, 7, 9, 15, -5, 0 };
 numbers.AddToFront<int>(-7);
-SimpleTuple<int, int> minAndMax = GetMinAndMax(numbers);
+
+var decimals = new List<decimal> { 1m, 2.2m, 5m, 9.6m, 8.3m };
+var ints = decimals.ConvertTo<decimal, int>();
+
+Tuple<int, int> minAndMax = GetMinAndMax(numbers);
 Console.WriteLine($"Min in a collection is: {minAndMax.Item1}");
 Console.WriteLine($"Max in a collection is: {minAndMax.Item2}");
 
 Console.ReadKey();
 
-SimpleTuple<int, int> GetMinAndMax(IEnumerable<int> input)
+Tuple<int, int> GetMinAndMax(IEnumerable<int> input)
 {
     if (!input.Any())
     {
@@ -29,18 +33,7 @@ SimpleTuple<int, int> GetMinAndMax(IEnumerable<int> input)
         }
     }
 
-    return new SimpleTuple<int, int>(min, max);
-}
-class SimpleTuple<T1, T2>
-{
-    public T1 Item1;
-    public T2 Item2;
-
-    public SimpleTuple(T1 item1, T2 item2)
-    {
-        Item1 = item1;
-        Item2 = item2;
-    }
+    return new Tuple<int, int>(min, max);
 }
 
 static class ListExtentions
@@ -48,5 +41,17 @@ static class ListExtentions
     public static void AddToFront<T>(this List<T> sourceList, T item)
     {
         sourceList.Insert(0, item);
+    }
+
+    public static List<TTarget> ConvertTo<TSource, TTarget>(this List<TSource> sourceList)
+    {
+        var res = new List<TTarget>();
+
+        foreach (var item in sourceList)
+        {
+            res.Add((TTarget)item);
+        }
+
+        return res;
     }
 }
