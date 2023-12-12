@@ -1,7 +1,9 @@
 ﻿var numbers = new List<int> { 1, 2, 3, 7, 9, 15, -5, 0 };
+numbers.AddToFront<int>(-7);
 SimpleTuple<int, int> minAndMax = GetMinAndMax(numbers);
 Console.WriteLine($"Min in a collection is: {minAndMax.Item1}");
 Console.WriteLine($"Max in a collection is: {minAndMax.Item2}");
+
 Console.ReadKey();
 
 SimpleTuple<int, int> GetMinAndMax(IEnumerable<int> input)
@@ -38,5 +40,13 @@ class SimpleTuple<T1, T2>
     {
         Item1 = item1;
         Item2 = item2;
+    }
+}
+
+static class ListExtentions
+{
+    public static void AddToFront<T>(this List<T> sourceList, T item)
+    {
+        sourceList.Insert(0, item);
     }
 }
