@@ -25,11 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptions", "..\Exceptions
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameDataParser", "..\GameDataParser\GameDataParser.csproj", "{4CFF0955-0EA5-4936-881D-3CD7F73F7429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicListImplementation", "..\BasicListImplementation\BasicListImplementation.csproj", "{40DB02B6-247A-4368-AE67-0F32C42F66BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicListImplementation", "..\BasicListImplementation\BasicListImplementation.csproj", "{40DB02B6-247A-4368-AE67-0F32C42F66BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodingExercises", "CodingExercises", "{923472BE-A415-4E2D-B98B-AD4F04185F44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwapTuple", "..\SwapTuple\SwapTuple.csproj", "{BCB06175-D74A-44AF-9BB8-0CF8470FECBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapTuple", "..\SwapTuple\SwapTuple.csproj", "{BCB06175-D74A-44AF-9BB8-0CF8470FECBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeConstraintAndIComparable", "..\TypeConstraintAndIComparable\TypeConstraintAndIComparable.csproj", "{6A60FF9D-A2DA-4689-BA19-B9189B29E487}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,12 +91,17 @@ Global
 		{BCB06175-D74A-44AF-9BB8-0CF8470FECBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCB06175-D74A-44AF-9BB8-0CF8470FECBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCB06175-D74A-44AF-9BB8-0CF8470FECBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A60FF9D-A2DA-4689-BA19-B9189B29E487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A60FF9D-A2DA-4689-BA19-B9189B29E487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A60FF9D-A2DA-4689-BA19-B9189B29E487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A60FF9D-A2DA-4689-BA19-B9189B29E487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BCB06175-D74A-44AF-9BB8-0CF8470FECBD} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
+		{6A60FF9D-A2DA-4689-BA19-B9189B29E487} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}

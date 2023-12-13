@@ -1,67 +1,85 @@
-﻿var numbers = new List<int> { 1, 2, 3, 7, 9, 15, -5, 0 };
-numbers.AddToFront<int>(-7);
+﻿var persons = new List<Person>
+{
+    new Person { Name = "John", YearOfBirth = 1980 },
+    new Person { Name = "Anna", YearOfBirth = 1915 },
+    new Person { Name = "Bill", YearOfBirth = 2011 },
+};
 
-var decimals = new List<decimal> { 1m, 2.2m, 5m, 9.6m, 8.3m };
-var ints = decimals.ConvertTo<decimal, int>();
+persons.Sort();
 
-var floats = new List<float> { 1.1f, 2.5f, 3f, 3.1415f };
-var longs = floats.ConvertTo<float, long>();
+var employees = new List<Employee>
+{
+    new Employee { Name = "John", YearOfBirth = 1980 },
+    new Employee { Name = "Anna", YearOfBirth = 2050 },
+    new Employee { Name = "Bill", YearOfBirth = 1800 },
+};
 
-Tuple<int, int> minAndMax = GetMinAndMax(numbers);
+var validPersons = GetOnlyValid<Person>(persons);
+var validEmployees = GetOnlyValid<Employee>(employees);
 
-Console.WriteLine($"Min in a collection is: {minAndMax.Item1}");
-Console.WriteLine($"Max in a collection is: {minAndMax.Item2}");
+foreach (var employee in validEmployees)
+{
+    employee.GoToWork();
+}
+
+var john = new Person { Name = "John", YearOfBirth = 1980 };
+var anna = new Person { Name = "Anna", YearOfBirth = 2002 };
+
+PrintInOrder(10, 5);
+PrintInOrder("bbb", "aaa");
+PrintInOrder(john, anna);
+
+void PrintInOrder<T>(T first, T second) where T : IComparable<T>
+{
+    if (first.CompareTo(second) > 0)
+    {
+        Console.WriteLine($"{second} {first}");
+    }
+    else
+    {
+        Console.WriteLine($"{first} {second}");
+    }
+}
 
 Console.ReadKey();
 
-Tuple<int, int> GetMinAndMax(IEnumerable<int> input)
+IEnumerable<TPerson> GetOnlyValid<TPerson>(IEnumerable<TPerson> persons) where TPerson : Person
 {
-    if (!input.Any())
+    var res = new List<TPerson>();
+
+    foreach (var person in persons)
     {
-        throw new InvalidOperationException("The input cannot be empty.");
-    }
-
-    int min = input.First();
-    int max = input.First();
-
-    foreach (var number in input)
-    {
-        if (number > max)
+        if (person.YearOfBirth > 1900 && person.YearOfBirth < DateTime.Now.Year)
         {
-            max = number;
-        }
-
-        if (number < min)
-        {
-            min = number;
+            res.Add(person);
         }
     }
 
-    return new Tuple<int, int>(min, max);
+    return res;
 }
 
-static class ListExtentions
+class Person : IComparable<Person>
 {
-    public static void AddToFront<T>(this List<T> sourceList, T item)
-    {
-        sourceList.Insert(0, item);
-    }
+    public string Name { get; init; }
+    public int YearOfBirth { get; init; }
+    public override string ToString() => $"The person name is: {Name} and year of birth is {YearOfBirth}";
 
-    public static List<TTarget> ConvertTo<TSource, TTarget>(this List<TSource> sourceList)
+    public int CompareTo(Person person)
     {
-        var res = new List<TTarget>();
-
-        foreach (var item in sourceList)
+        if (YearOfBirth < person.YearOfBirth)
         {
-            TTarget itemAfterCasting = (TTarget)Convert.ChangeType(item, typeof(TTarget));
-            res.Add(itemAfterCasting);
+            return 1;
+        }
+        else if (YearOfBirth > person.YearOfBirth)
+        {
+            return -1;
         }
 
-        return res;
+        return 0;
     }
 }
 
-IEnumerable<T> CreateCollectionOfRandomLenght<T>(int maxLength) where T: new()
+class Employee : Person
 {
-    var length = new Random().Next(0, maxLength);
+    public void GoToWork() => Console.WriteLine("Going to work.");
 }
