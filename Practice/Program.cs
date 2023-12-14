@@ -20,12 +20,14 @@ Dictionary<string, decimal> AverageSalaryOnDepartment(IEnumerable<Employee> empl
 
     foreach (var employee in employees)
     {
-        if (!res.ContainsKey(employee.Department))
+        if (!temp.ContainsKey(employee.Department))
         {
-            temp[employee.Department] = new List<decimal> { employee.Salary };
+            //Console.WriteLine($"Department {employee.Department} no exists. Create new one and add root {employee.Salary} salary.");
+            temp.Add(employee.Department, new List<decimal> { employee.Salary });
         }
         else
         {
+            //Console.WriteLine($"Departmnet {employee.Department} exists, add salary {employee.Salary} to {employee.Department}.");
             temp[employee.Department].Add(employee.Salary);
         }
     }
@@ -42,7 +44,7 @@ var res = AverageSalaryOnDepartment(employees);
 
 foreach (var item in res)
 {
-    Console.WriteLine($"On department {item.Key} avarage salary is: {item.Value}");
+    Console.WriteLine($"On department `{item.Key}` avarage salary is: {item.Value}");
 }
 
 T CalcAverage<T>(IEnumerable<T> values) where T : INumber<T>
@@ -56,7 +58,7 @@ T CalcAverage<T>(IEnumerable<T> values) where T : INumber<T>
         count++;
     }
 
-    return sum / count;
+    return (sum / count);
 }
 
 Console.ReadKey();
