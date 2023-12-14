@@ -17,7 +17,16 @@ public class FullName : IComparable<FullName>
 
     public int CompareTo(FullName other)
     {
-        throw new NotImplementedException();
+        if (LastName.CompareTo(other.LastName) > 0)
+        {
+            return 1;
+        }
+        else if (LastName.CompareTo(other.LastName) == 0)
+        {
+            return FirstName.CompareTo(other.FirstName);
+        }
+
+        return -1;
     }
 
     public override string ToString() => $"{FirstName} {LastName}";
