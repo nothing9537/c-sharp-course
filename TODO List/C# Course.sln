@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeConstraintAndIComparabl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignments", "Assignments", "{06D53043-ECD7-4406-9CD1-DF9029A2BDD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMaxWeights", "..\FindMaxWeights\FindMaxWeights.csproj", "{D5B3660C-5409-4788-8F1E-F842E6BCADD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindMaxWeights", "..\FindMaxWeights\FindMaxWeights.csproj", "{D5B3660C-5409-4788-8F1E-F842E6BCADD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCache", "..\CustomCache\CustomCache.csproj", "{722AE61E-A254-405C-A4E4-8361B948E31D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,10 @@ Global
 		{D5B3660C-5409-4788-8F1E-F842E6BCADD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5B3660C-5409-4788-8F1E-F842E6BCADD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5B3660C-5409-4788-8F1E-F842E6BCADD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{722AE61E-A254-405C-A4E4-8361B948E31D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722AE61E-A254-405C-A4E4-8361B948E31D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722AE61E-A254-405C-A4E4-8361B948E31D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722AE61E-A254-405C-A4E4-8361B948E31D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{BCB06175-D74A-44AF-9BB8-0CF8470FECBD} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{6A60FF9D-A2DA-4689-BA19-B9189B29E487} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{D5B3660C-5409-4788-8F1E-F842E6BCADD2} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
+		{722AE61E-A254-405C-A4E4-8361B948E31D} = {06D53043-ECD7-4406-9CD1-DF9029A2BDD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}
