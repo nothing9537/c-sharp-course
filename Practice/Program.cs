@@ -43,7 +43,6 @@ public class FilteringStrategySelector
 
 public class Filter
 {
-
     public IEnumerable<T> FilterBy<T>(Func<T, bool> predicate, IEnumerable<T> numbers)
     {
         var res = new List<T>();
