@@ -6,7 +6,7 @@ namespace CookieCookbook;
 
 class MainCookbook
 {
-    public List<int> IngredientsId = new List<int>();
+    public List<int> IngredientsId = [];
     public List<Ingredient> AvailableIngredients { get; init; }
 
     private readonly string _filePath;
@@ -17,8 +17,8 @@ class MainCookbook
         _filePath = filePath;
         _readWriteFileFormat = fileFormat;
         _helper = new MainHelper(this, _readWriteFileFormat, _filePath);
-        AvailableIngredients = new List<Ingredient>
-        {
+        AvailableIngredients =
+        [
             new WheatFlour(),
             new CoconutFlour(),
             new Butter(),
@@ -27,7 +27,7 @@ class MainCookbook
             new Cardamon(),
             new Cinnamon(),
             new CocaPowder(),
-        };
+        ];
     }
 
     public void Init()
