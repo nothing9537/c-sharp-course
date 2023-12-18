@@ -13,7 +13,7 @@ class JSONTextualRepository : IBaseRepository
             return JsonSerializer.Deserialize<List<string>>(fileContent)!;
         }
 
-        return new List<string>();
+        return [];
     }
 
     public void Write(string filePath, List<int> ids)

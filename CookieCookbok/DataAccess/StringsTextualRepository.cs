@@ -11,7 +11,7 @@ class StringsTextualRepository : IBaseRepository
             return File.ReadAllText(filePath).Split(_separator).ToList();
         }
 
-        return new List<string>();
+        return [];
     }
     public void Write(string filePath, List<int> ids)
     {
