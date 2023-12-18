@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class Exercise
+{
+    public static IEnumerable<DateTime> GetFridaysOfYear(int year, IEnumerable<DateTime> dates)
+    {
+        return dates.Where(d => d.Year == year && d.DayOfWeek == DayOfWeek.Friday).Distinct();
+    }
+}

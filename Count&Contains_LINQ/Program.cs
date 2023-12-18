@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class Exercise
+{
+    public static int CountListsContainingZeroLongerThan(int length, List<List<int>> listsOfNumbers)
+    {
+        return listsOfNumbers.Count(l => l.Contains(0) && l.Count() > length);
+    }
+}

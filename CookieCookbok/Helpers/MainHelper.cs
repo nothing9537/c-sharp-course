@@ -5,10 +5,10 @@ using CookieCookbook.Types;
 namespace CookieCookbook.Helpers;
 class MainHelper
 {
-    private MainCookbook _cookbook;
-    private ValidationHelper _validationHelper;
-    private IBaseRepository _repository;
-    private string _filePath;
+    private readonly MainCookbook _cookbook;
+    private readonly ValidationHelper _validationHelper;
+    private readonly IBaseRepository _repository;
+    private readonly string _filePath;
     public MainHelper(MainCookbook cookbook, FileFormat fileFormat, string filePath)
     {
         _filePath = filePath;
@@ -40,6 +40,7 @@ class MainHelper
                     );
 
                 DisplayReceipt(_cookbook.IngredientsId);
+                return;
             }
         };
     }

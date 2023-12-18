@@ -9,13 +9,14 @@ class MainCookbook
     public List<int> IngredientsId = new List<int>();
     public List<Ingredient> AvailableIngredients { get; init; }
 
-    private string _filePath;
-    private FileFormat _readWriteFileFormat;
-    private MainHelper _helper;
+    private readonly string _filePath;
+    private readonly FileFormat _readWriteFileFormat;
+    private readonly MainHelper _helper;
     public MainCookbook(FileFormat fileFormat, string filePath)
     {
         _filePath = filePath;
         _readWriteFileFormat = fileFormat;
+        _helper = new MainHelper(this, _readWriteFileFormat, _filePath);
         AvailableIngredients = new List<Ingredient>
         {
             new WheatFlour(),
@@ -31,7 +32,6 @@ class MainCookbook
 
     public void Init()
     {
-        _helper = new MainHelper(this, _readWriteFileFormat, _filePath);
         _helper.DisplayReceiptsFromFile();
 
         DisplayAvailabelIngredients();

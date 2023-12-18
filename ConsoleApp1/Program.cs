@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class Exercise
+{
+    public static string FindShortestWord(List<string> words)
+    {
+        return words.OrderBy(word => word.Length).First();
+    }
+}
