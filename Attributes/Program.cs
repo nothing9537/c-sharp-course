@@ -58,6 +58,7 @@ public class Validator
         return true;
     }
 }
+
 [AttributeUsage(AttributeTargets.Property)]
 public class StringLengthValidateAttribute : Attribute
 {
