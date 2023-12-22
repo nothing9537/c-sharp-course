@@ -4,7 +4,7 @@ Console.WriteLine(time);
 
 Console.ReadKey();
 
-public struct Time : IEquatable<Time>
+public readonly struct Time : IEquatable<Time>
 {
     public int Hour { get; }
     public int Minute { get; }
@@ -18,11 +18,11 @@ public struct Time : IEquatable<Time>
         Minute = minute;
     }
 
-    private bool ValidateIncomeParams(int value, Func<int, bool> predicate, string message = "") => !predicate(value) ? throw new ArgumentOutOfRangeException(message) : true;
+    private static bool ValidateIncomeParams(int value, Func<int, bool> predicate, string message = "") => !predicate(value) ? throw new ArgumentOutOfRangeException(message) : true;
 
-    public override string ToString() => $"{Hour.ToString("00")}:{Minute.ToString("00")}";
+    public override readonly string ToString() => $"{Hour:00}:{Minute:00}";
 
-    public bool Equals(Time other)
+    public readonly bool Equals(Time other)
     {
         return Hour == other.Hour && Minute == other.Minute;
     }
@@ -39,17 +39,22 @@ public struct Time : IEquatable<Time>
         var newMinutes = a.Minute + b.Minute;
         var newHours = a.Hour + b.Hour;
 
-        if (newMinutes > 59)
+        if (newMinutes >= 60)
         {
             newMinutes -= 60;
             newHours++;
         }
 
-        if (newHours > 23)
+        if (newHours >= 24)
         {
             newHours -= 24;
         }
 
         return new Time(newHours, newMinutes);
+    }
+
+    public override int GetHashCode()
+    {
+        throw new NotImplementedException();
     }
 }
