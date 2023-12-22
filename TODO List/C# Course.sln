@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImmutableStructTime", "..\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equals", "..\Equals\Equals.csproj", "{2FFC4DF7-85C6-4C33-A601-9A567A05167A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "..\Point\Point.csproj", "{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -199,6 +201,10 @@ Global
 		{2FFC4DF7-85C6-4C33-A601-9A567A05167A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FFC4DF7-85C6-4C33-A601-9A567A05167A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FFC4DF7-85C6-4C33-A601-9A567A05167A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
