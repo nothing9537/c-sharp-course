@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attributes", "..\Attributes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MustBeLargerThanAttribute", "..\MustBeLargerThanAttribute\MustBeLargerThanAttribute.csproj", "{8B6CB1E6-A6E7-4786-A605-F306D05EBD60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImmutableStructTime", "..\ImmutableStructTime\ImmutableStructTime.csproj", "{51376332-61A0-4A4D-9BE8-0068566E390A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -187,6 +189,10 @@ Global
 		{8B6CB1E6-A6E7-4786-A605-F306D05EBD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B6CB1E6-A6E7-4786-A605-F306D05EBD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B6CB1E6-A6E7-4786-A605-F306D05EBD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51376332-61A0-4A4D-9BE8-0068566E390A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51376332-61A0-4A4D-9BE8-0068566E390A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51376332-61A0-4A4D-9BE8-0068566E390A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51376332-61A0-4A4D-9BE8-0068566E390A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -209,6 +215,7 @@ Global
 		{0C4EFE22-0D3D-4BE6-9355-1829BF055C35} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{E579184C-D046-4A37-A093-A00D64BADC79} = {06D53043-ECD7-4406-9CD1-DF9029A2BDD4}
 		{8B6CB1E6-A6E7-4786-A605-F306D05EBD60} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
+		{51376332-61A0-4A4D-9BE8-0068566E390A} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}
