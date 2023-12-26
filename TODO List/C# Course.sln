@@ -59,17 +59,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_Reader", "..\CSV_Reader
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetUnderTheHoodAssignment", "..\..\..\..\Downloads\NetUnderTheHoodAssignment\NetUnderTheHoodAssignment\NetUnderTheHoodAssignment\NetUnderTheHoodAssignment.csproj", "{E579184C-D046-4A37-A093-A00D64BADC79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "..\Reflection\Reflection.csproj", "{3F05E20A-871E-430D-B26E-9F029F19C246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reflection", "..\Reflection\Reflection.csproj", "{3F05E20A-871E-430D-B26E-9F029F19C246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attributes", "..\Attributes\Attributes.csproj", "{5B7B822E-6258-4A41-8AC2-59FD90617C95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attributes", "..\Attributes\Attributes.csproj", "{5B7B822E-6258-4A41-8AC2-59FD90617C95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MustBeLargerThanAttribute", "..\MustBeLargerThanAttribute\MustBeLargerThanAttribute.csproj", "{8B6CB1E6-A6E7-4786-A605-F306D05EBD60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MustBeLargerThanAttribute", "..\MustBeLargerThanAttribute\MustBeLargerThanAttribute.csproj", "{8B6CB1E6-A6E7-4786-A605-F306D05EBD60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImmutableStructTime", "..\ImmutableStructTime\ImmutableStructTime.csproj", "{51376332-61A0-4A4D-9BE8-0068566E390A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImmutableStructTime", "..\ImmutableStructTime\ImmutableStructTime.csproj", "{51376332-61A0-4A4D-9BE8-0068566E390A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equals", "..\Equals\Equals.csproj", "{2FFC4DF7-85C6-4C33-A601-9A567A05167A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Equals", "..\Equals\Equals.csproj", "{2FFC4DF7-85C6-4C33-A601-9A567A05167A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "..\Point\Point.csproj", "{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point", "..\Point\Point.csproj", "{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherData", "..\WeatherData\WeatherData.csproj", "{6CBE3E9E-B9AA-4409-9841-3EB99105809D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -205,6 +207,10 @@ Global
 		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76ACC132-6C1B-41E1-A13E-26CD5F88B41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBE3E9E-B9AA-4409-9841-3EB99105809D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBE3E9E-B9AA-4409-9841-3EB99105809D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBE3E9E-B9AA-4409-9841-3EB99105809D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBE3E9E-B9AA-4409-9841-3EB99105809D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
