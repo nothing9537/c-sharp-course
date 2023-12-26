@@ -55,6 +55,6 @@ public readonly struct Time : IEquatable<Time>
 
     public override int GetHashCode()
     {
-        throw new NotImplementedException();
+        return HashCode.Combine(Hour, Minute);
     }
 }
