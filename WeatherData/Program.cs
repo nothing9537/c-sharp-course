@@ -1,12 +1,23 @@
 ﻿var weatherData = new WeatherData(25.1m, 65);
 var weatherDataRecord = new WeatherDataRecord(25.1m, 65);
 
-Console.WriteLine(weatherData);
-Console.WriteLine(weatherDataRecord);
+Console.WriteLine(weatherData); // Almost same result
+Console.WriteLine(weatherDataRecord); // Almost same result
 
 Console.ReadKey();
 
 public record class WeatherDataRecord(decimal Temperature, int Humidity);
+public record class WeatherDataRecordWithBody
+{
+    public decimal Temperature { get; }
+    public int Humidity { get; }
+
+    public WeatherDataRecordWithBody(decimal temperature, int humidity)
+    {
+        Temperature = temperature;
+        Humidity = humidity;
+    }
+}
 
 public class WeatherData : IEquatable<WeatherData>
 {
