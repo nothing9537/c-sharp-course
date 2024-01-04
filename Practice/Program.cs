@@ -44,6 +44,12 @@ public class CustomCollection : IEnumerable<string>
     {
         return new WordsEnumenator(Words);
     }
+
+    public string this[int index]
+    {
+        get => Words[index];
+        set => Words[index] = value;
+    }
 }
 
 public class WordsEnumenator : IEnumerator<string>, IDisposable
