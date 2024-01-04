@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-var customCollection = new CustomCollection(new string[] { "aaa", "bbb", "ccc" });
+var customCollection = new CustomCollection(["aaa", "bbb", "ccc"]);
 //string[] words = ["aaa", "bbb", "ccc"];
 
 //foreach (var word in words)

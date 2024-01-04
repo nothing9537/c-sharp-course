@@ -73,9 +73,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point", "..\Point\Point.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherData", "..\WeatherData\WeatherData.csproj", "{6CBE3E9E-B9AA-4409-9841-3EB99105809D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Calls", "..\API_Calls\API_Calls.csproj", "{D6DC7368-553B-4285-A4CE-DC852BBE7591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Calls", "..\API_Calls\API_Calls.csproj", "{D6DC7368-553B-4285-A4CE-DC852BBE7591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsPlanetsStats", "..\StarWarsPlanetsStats\StarWarsPlanetsStats.csproj", "{DEBB9802-EBE8-4D5B-A164-2CCAA324B35B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsPlanetsStats", "..\StarWarsPlanetsStats\StarWarsPlanetsStats.csproj", "{DEBB9802-EBE8-4D5B-A164-2CCAA324B35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairOfArrays", "..\PairOfArrays\PairOfArrays.csproj", "{4A27F249-364C-4768-A9E9-3A381A8FA49F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -223,6 +225,10 @@ Global
 		{DEBB9802-EBE8-4D5B-A164-2CCAA324B35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEBB9802-EBE8-4D5B-A164-2CCAA324B35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEBB9802-EBE8-4D5B-A164-2CCAA324B35B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A27F249-364C-4768-A9E9-3A381A8FA49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A27F249-364C-4768-A9E9-3A381A8FA49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A27F249-364C-4768-A9E9-3A381A8FA49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A27F249-364C-4768-A9E9-3A381A8FA49F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -248,6 +254,7 @@ Global
 		{51376332-61A0-4A4D-9BE8-0068566E390A} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{2FFC4DF7-85C6-4C33-A601-9A567A05167A} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{DEBB9802-EBE8-4D5B-A164-2CCAA324B35B} = {06D53043-ECD7-4406-9CD1-DF9029A2BDD4}
+		{4A27F249-364C-4768-A9E9-3A381A8FA49F} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}
