@@ -10,9 +10,13 @@
         _right = right;
     }
 
-    public object this[int leftIndex, int rightIndex]
+    public (TLeft, TRight) this[int leftIndex, int rightIndex]
     {
         get => (_left[leftIndex], _right[rightIndex]);
-        set { /* set the specified index to value here */ }
+        set
+        {
+            _left[leftIndex] = value.Item1;
+            _right[rightIndex] = value.Item2;
+        }
     }
 }
