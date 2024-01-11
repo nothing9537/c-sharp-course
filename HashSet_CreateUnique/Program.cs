@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public static class HashSetsUnionExercise
+{
+    public static HashSet<T> CreateUnion<T>(
+        HashSet<T> set1, HashSet<T> set2)
+    {
+        return new HashSet<T>(set1.Concat(set2));
+    }
+}
