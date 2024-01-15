@@ -2,7 +2,7 @@
 
 var customCollection = new CustomCollection(["aaa", "bbb", "ccc"]);
 var customCollectionWithInitializer = new CustomCollection() { "one", "two", "three" };
-//string[] words = ["aaa", "bbb", "ccc"];
+string[] words = ["aaa", "bbb", "ccc"];
 
 //foreach (var word in words)
 //{
