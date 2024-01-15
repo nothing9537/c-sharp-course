@@ -55,7 +55,11 @@ public class CustomCollection : IEnumerable<string>
 
     public IEnumerator<string> GetEnumerator()
     {
-        return new WordsEnumenator(Words);
+        //return new WordsEnumenator(Words);
+        foreach (var item in Words)
+        {
+            yield return item;
+        }
     }
 
     public string this[int index]
