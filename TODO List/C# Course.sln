@@ -97,6 +97,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLinkedList", "..\Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder_TheReverseMethod", "..\StringBuilder_TheReverseMethod\StringBuilder_TheReverseMethod.csproj", "{5DD7ECDB-28B6-4926-AE6C-971BB9678654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketsDataAggregator", "..\TicketsDataAggregator\TicketsDataAggregator.csproj", "{13879A12-E21C-4154-ABEB-505DBD9C1557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checked_FibonacchiSequence", "..\Checked_FibonacchiSequence\Checked_FibonacchiSequence.csproj", "{3706FED7-D3B8-422C-AF87-0275A63DCD0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +283,14 @@ Global
 		{5DD7ECDB-28B6-4926-AE6C-971BB9678654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DD7ECDB-28B6-4926-AE6C-971BB9678654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DD7ECDB-28B6-4926-AE6C-971BB9678654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13879A12-E21C-4154-ABEB-505DBD9C1557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13879A12-E21C-4154-ABEB-505DBD9C1557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13879A12-E21C-4154-ABEB-505DBD9C1557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13879A12-E21C-4154-ABEB-505DBD9C1557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3706FED7-D3B8-422C-AF87-0275A63DCD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3706FED7-D3B8-422C-AF87-0275A63DCD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3706FED7-D3B8-422C-AF87-0275A63DCD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3706FED7-D3B8-422C-AF87-0275A63DCD0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -311,6 +323,8 @@ Global
 		{D83916EE-5BA5-4312-A60C-9712893F4706} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{1B7C6ACA-2DD3-491C-8757-152D65A80CD6} = {06D53043-ECD7-4406-9CD1-DF9029A2BDD4}
 		{5DD7ECDB-28B6-4926-AE6C-971BB9678654} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
+		{13879A12-E21C-4154-ABEB-505DBD9C1557} = {06D53043-ECD7-4406-9CD1-DF9029A2BDD4}
+		{3706FED7-D3B8-422C-AF87-0275A63DCD0B} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}
