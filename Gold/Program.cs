@@ -5,14 +5,25 @@ var pushPriceChangeNotifier = new PushPriceChangeNotifier(threshold);
 
 var goldPriceReader = new GoldPriceReader();
 
-goldPriceReader.ReadPrice += emailPriceChangeNotifier.Update;
-goldPriceReader.ReadPrice += pushPriceChangeNotifier.Update;
+goldPriceReader.ReadPrice += emailPriceChangeNotifier.Update; // both custom and pre-builded events
+goldPriceReader.ReadPrice += pushPriceChangeNotifier.Update; // both custom and pre-builded events
 
-public delegate void ReadPrice(decimal price);
+//public delegate void ReadPrice(decimal price); // custom event
+
+public class ReadPriceEventArgs : EventArgs
+{
+    public decimal Price { get; }
+
+    public ReadPriceEventArgs(decimal price)
+    {
+        Price = price;
+    }
+}
 
 public class GoldPriceReader
 {
-    public event ReadPrice? ReadPrice; // event
+    //public event ReadPrice? ReadPrice; // custom event
+    public event EventHandler<ReadPriceEventArgs>? ReadPrice;
 
     public void ReadCurrentPrice()
     {
@@ -23,7 +34,7 @@ public class GoldPriceReader
 
     private void OnReadPrice(decimal price)
     {
-        ReadPrice?.Invoke(price);
+        ReadPrice?.Invoke(this, new ReadPriceEventArgs(price));
     }
 }
 
@@ -36,11 +47,11 @@ public class EmailPriceChangeNotifier
         _notificationThreshold = notificationThreshold;
     }
 
-    public void Update(decimal price) // Event will call it as delegate
+    public void Update(object? sender, ReadPriceEventArgs eventArgs) // Event will call it as delegate
     {
-        if (price > _notificationThreshold)
+        if (eventArgs.Price > _notificationThreshold)
         {
-            Console.WriteLine($"Sending an email saying that the gold price exceeded {_notificationThreshold} and now price is: {price}\n");
+            Console.WriteLine($"Sending an email saying that the gold price exceeded {_notificationThreshold} and now price is: {eventArgs.Price}\n");
         }
     }
 }
@@ -54,11 +65,11 @@ public class PushPriceChangeNotifier
         _notificationThreshold = notificationThreshold;
     }
 
-    public void Update(decimal price) // Event will call it as delegate
+    public void Update(object? sender, ReadPriceEventArgs eventArgs) // Event will call it as delegate
     {
-        if (price > _notificationThreshold)
+        if (eventArgs.Price > _notificationThreshold)
         {
-            Console.WriteLine($"Sending a push notification that the gold price exceeded {_notificationThreshold} and now price is: {price}\n");
+            Console.WriteLine($"Sending a push notification that the gold price exceeded {_notificationThreshold} and now price is: {eventArgs.Price}\n");
         }
     }
 }
