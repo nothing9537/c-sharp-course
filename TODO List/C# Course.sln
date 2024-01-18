@@ -105,7 +105,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingPointNumbers_IsAver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold_Events", "..\Gold\Gold_Events.csproj", "{E454899F-13CB-43AD-94DC-0BBDD89B7B09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold", "..\Gold_Events\Gold.csproj", "{7772DF3E-12A6-4147-8067-F76C74E2BD6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold_Observers", "..\Gold_Events\Gold_Observers.csproj", "{7772DF3E-12A6-4147-8067-F76C74E2BD6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_UserAndBankAccount", "..\Events_UserAndBankAccount\Events_UserAndBankAccount.csproj", "{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}"
 EndProject
