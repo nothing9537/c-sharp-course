@@ -1,25 +1,77 @@
-﻿public class GoldPriceReader
+﻿const int threshold = 30_000;
+
+var emailPriceChangeNotifier = new EmailPriceChangeNotifier(threshold);
+var pushPriceChangeNotifier = new PushPriceChangeNotifier(threshold);
+var goldPriceReader = new GoldPriceReader();
+
+goldPriceReader.AttachObserver([emailPriceChangeNotifier, pushPriceChangeNotifier]);
+
+Console.WriteLine("Before detach");
+
+for (var i = 0; i < 3; i++)
+{
+    goldPriceReader.ReadCurrentPrice();
+}
+
+Console.WriteLine("After detach");
+
+goldPriceReader.DetachObserver(emailPriceChangeNotifier);
+
+for (var i = 0; i < 3; i++)
+{
+    goldPriceReader.ReadCurrentPrice();
+}
+
+Console.ReadKey();
+
+public class GoldPriceReader : IObservable<decimal>
 {
     private int _currentGoldPrice;
-    private readonly EmailPriceChangeNotifier _emailPriceChangeNotifier;
-    private readonly PushPriceChangeNotifier _pushPriceChangeNotifier;
-
-    public GoldPriceReader(EmailPriceChangeNotifier emailPriceChangeNotifier, PushPriceChangeNotifier pushPriceChangeNotifier)
-    {
-        _emailPriceChangeNotifier = emailPriceChangeNotifier;
-        _pushPriceChangeNotifier = pushPriceChangeNotifier;
-    }
+    private List<IObserver<decimal>> _observers = new();
 
     public void ReadCurrentPrice()
     {
         _currentGoldPrice = new Random().Next(20_000, 50_000);
 
-        _emailPriceChangeNotifier.Update(_currentGoldPrice);
-        _pushPriceChangeNotifier.Update(_currentGoldPrice);
+        NotifyObservers();
+    }
+
+    public void AttachObserver(IObserver<decimal> observer)
+    {
+        _observers.Add(observer);
+    }
+
+    public void DetachObserver(IObserver<decimal> observer)
+    {
+        _observers.Remove(observer);
+    }
+
+    public void NotifyObservers()
+    {
+        foreach (var observer in _observers)
+        {
+            observer.Update(_currentGoldPrice);
+        }
+    }
+
+    public void AttachObserver(IEnumerable<IObserver<decimal>> observers)
+    {
+        foreach (var observer in observers)
+        {
+            AttachObserver(observer);
+        }
+    }
+
+    public void DetachObserver(IEnumerable<IObserver<decimal>> observers)
+    {
+        foreach (var observer in observers)
+        {
+            DetachObserver(observer);
+        }
     }
 }
 
-public class EmailPriceChangeNotifier
+public class EmailPriceChangeNotifier : IObserver<decimal>
 {
     private readonly decimal _notificationThreshold;
 
@@ -37,7 +89,7 @@ public class EmailPriceChangeNotifier
     }
 }
 
-public class PushPriceChangeNotifier
+public class PushPriceChangeNotifier : IObserver<decimal>
 {
     private readonly decimal _notificationThreshold;
 
@@ -53,4 +105,18 @@ public class PushPriceChangeNotifier
             Console.WriteLine($"Sending a push notification that the gold price exceeded {_notificationThreshold} and now price is: {price}\n");
         }
     }
+}
+
+public interface IObserver<TPayload>
+{
+    void Update(TPayload data);
+}
+
+public interface IObservable<TPayload>
+{
+    void AttachObserver(IObserver<TPayload> observer);
+    void AttachObserver(IEnumerable<IObserver<TPayload>> observers);
+    void DetachObserver(IObserver<TPayload> observer);
+    void DetachObserver(IEnumerable<IObserver<TPayload>> observers);
+    void NotifyObservers();
 }

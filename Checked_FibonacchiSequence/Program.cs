@@ -1,4 +1,4 @@
-﻿foreach (var fibNum in CheckedFibonacciExercise.GetFibonacci(48))
+﻿foreach (var fibNum in CheckedFibonacciExercise.GetFibonacci(10))
 {
     Console.WriteLine(fibNum);
 }
