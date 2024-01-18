@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold_Observers", "..\Gold_E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_UserAndBankAccount", "..\Events_UserAndBankAccount\Events_UserAndBankAccount.csproj", "{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_WeatherDataAggregator", "..\Events_WeatherDataAggregator\Events_WeatherDataAggregator.csproj", "{56F6848E-62C6-4584-89AB-98EFE287C4E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,10 @@ Global
 		{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -351,6 +357,7 @@ Global
 		{3706FED7-D3B8-422C-AF87-0275A63DCD0B} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{9F1D84BF-5746-4242-B1EA-881DEDC032B0} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
+		{56F6848E-62C6-4584-89AB-98EFE287C4E6} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}

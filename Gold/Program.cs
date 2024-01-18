@@ -1,14 +1,27 @@
 ﻿const int threshold = 30_000;
 
-var emailPriceChangeNotifier = new EmailPriceChangeNotifier(threshold);
-var pushPriceChangeNotifier = new PushPriceChangeNotifier(threshold);
-
 var goldPriceReader = new GoldPriceReader();
 
-goldPriceReader.ReadPrice += emailPriceChangeNotifier.Update; // both custom and pre-builded events
-goldPriceReader.ReadPrice += pushPriceChangeNotifier.Update; // both custom and pre-builded events
-
 //public delegate void ReadPrice(decimal price); // custom event
+
+bool areNotificationsEnabled = true;
+
+if (areNotificationsEnabled)
+{
+    var emailPriceChangeNotifier = new EmailPriceChangeNotifier(threshold);
+    var pushPriceChangeNotifier = new PushPriceChangeNotifier(threshold);
+
+    goldPriceReader.ReadPrice += emailPriceChangeNotifier.Update; // both custom and pre-builded events
+    goldPriceReader.ReadPrice += pushPriceChangeNotifier.Update; // both custom and pre-builded events
+
+    for (int i = 0; i < 3; i++)
+    {
+        goldPriceReader.ReadCurrentPrice();
+    }
+
+    goldPriceReader.ReadPrice -= emailPriceChangeNotifier.Update;
+    goldPriceReader.ReadPrice -= pushPriceChangeNotifier.Update;
+}
 
 public class ReadPriceEventArgs : EventArgs
 {
