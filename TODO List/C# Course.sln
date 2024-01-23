@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_UserAndBankAccount",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_WeatherDataAggregator", "..\Events_WeatherDataAggregator\Events_WeatherDataAggregator.csproj", "{56F6848E-62C6-4584-89AB-98EFE287C4E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "..\WinFormsApp1\WinFormsApp1.csproj", "{5400D4C1-9981-4C0C-999B-9210E7454A5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -321,6 +323,10 @@ Global
 		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56F6848E-62C6-4584-89AB-98EFE287C4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
