@@ -95,23 +95,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetAllAfterLastNullReversed
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLinkedList", "..\CustomLinkedList\CustomLinkedList.csproj", "{1B7C6ACA-2DD3-491C-8757-152D65A80CD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder_TheReverseMethod", "..\StringBuilder_TheReverseMethod\StringBuilder_TheReverseMethod.csproj", "{5DD7ECDB-28B6-4926-AE6C-971BB9678654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringBuilder_TheReverseMethod", "..\StringBuilder_TheReverseMethod\StringBuilder_TheReverseMethod.csproj", "{5DD7ECDB-28B6-4926-AE6C-971BB9678654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketsDataAggregator", "..\TicketsDataAggregator\TicketsDataAggregator.csproj", "{13879A12-E21C-4154-ABEB-505DBD9C1557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketsDataAggregator", "..\TicketsDataAggregator\TicketsDataAggregator.csproj", "{13879A12-E21C-4154-ABEB-505DBD9C1557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checked_FibonacchiSequence", "..\Checked_FibonacchiSequence\Checked_FibonacchiSequence.csproj", "{3706FED7-D3B8-422C-AF87-0275A63DCD0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Checked_FibonacchiSequence", "..\Checked_FibonacchiSequence\Checked_FibonacchiSequence.csproj", "{3706FED7-D3B8-422C-AF87-0275A63DCD0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingPointNumbers_IsAverageEqualTo", "..\FloatingPointNumbers_IsAverageEqualTo\FloatingPointNumbers_IsAverageEqualTo.csproj", "{9F1D84BF-5746-4242-B1EA-881DEDC032B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FloatingPointNumbers_IsAverageEqualTo", "..\FloatingPointNumbers_IsAverageEqualTo\FloatingPointNumbers_IsAverageEqualTo.csproj", "{9F1D84BF-5746-4242-B1EA-881DEDC032B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold_Events", "..\Gold\Gold_Events.csproj", "{E454899F-13CB-43AD-94DC-0BBDD89B7B09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gold_Events", "..\Gold\Gold_Events.csproj", "{E454899F-13CB-43AD-94DC-0BBDD89B7B09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gold_Observers", "..\Gold_Events\Gold_Observers.csproj", "{7772DF3E-12A6-4147-8067-F76C74E2BD6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gold_Observers", "..\Gold_Events\Gold_Observers.csproj", "{7772DF3E-12A6-4147-8067-F76C74E2BD6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_UserAndBankAccount", "..\Events_UserAndBankAccount\Events_UserAndBankAccount.csproj", "{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events_UserAndBankAccount", "..\Events_UserAndBankAccount\Events_UserAndBankAccount.csproj", "{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events_WeatherDataAggregator", "..\Events_WeatherDataAggregator\Events_WeatherDataAggregator.csproj", "{56F6848E-62C6-4584-89AB-98EFE287C4E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events_WeatherDataAggregator", "..\Events_WeatherDataAggregator\Events_WeatherDataAggregator.csproj", "{56F6848E-62C6-4584-89AB-98EFE287C4E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "..\WinFormsApp1\WinFormsApp1.csproj", "{5400D4C1-9981-4C0C-999B-9210E7454A5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "..\WinFormsApp1\WinFormsApp1.csproj", "{5400D4C1-9981-4C0C-999B-9210E7454A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericNumberSuggester", "..\NumericNumberSuggester\NumericNumberSuggester.csproj", "{11B0F017-3770-47DF-87EE-E0B66C2941DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -327,6 +329,10 @@ Global
 		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5400D4C1-9981-4C0C-999B-9210E7454A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B0F017-3770-47DF-87EE-E0B66C2941DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B0F017-3770-47DF-87EE-E0B66C2941DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B0F017-3770-47DF-87EE-E0B66C2941DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B0F017-3770-47DF-87EE-E0B66C2941DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -364,6 +370,7 @@ Global
 		{9F1D84BF-5746-4242-B1EA-881DEDC032B0} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{FB8C2EE9-8C22-4EE6-BC2C-AEB43A4EEA03} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
 		{56F6848E-62C6-4584-89AB-98EFE287C4E6} = {923472BE-A415-4E2D-B98B-AD4F04185F44}
+		{11B0F017-3770-47DF-87EE-E0B66C2941DD} = {06D53043-ECD7-4406-9CD1-DF9029A2BDD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFD26AB0-DEEA-409A-92E1-0A8D80F860C7}
