@@ -98,7 +98,7 @@
             // 
             SuggestedTypeLabel.AutoSize = true;
             SuggestedTypeLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            SuggestedTypeLabel.Location = new Point(40, 155);
+            SuggestedTypeLabel.Location = new Point(33, 155);
             SuggestedTypeLabel.Name = "SuggestedTypeLabel";
             SuggestedTypeLabel.Size = new Size(182, 30);
             SuggestedTypeLabel.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             SuggestedTypeValue.AutoSize = true;
             SuggestedTypeValue.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            SuggestedTypeValue.Location = new Point(219, 155);
+            SuggestedTypeValue.Location = new Point(221, 155);
             SuggestedTypeValue.Name = "SuggestedTypeValue";
             SuggestedTypeValue.Size = new Size(185, 30);
             SuggestedTypeValue.TabIndex = 6;
@@ -128,12 +128,12 @@
             MustBePreciseCheckbox.UseVisualStyleBackColor = true;
             MustBePreciseCheckbox.CheckedChanged += MustBePreciseCheckbox_CheckedChanged;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(943, 252);
+            ClientSize = new Size(921, 252);
             Controls.Add(MustBePreciseCheckbox);
             Controls.Add(SuggestedTypeValue);
             Controls.Add(SuggestedTypeLabel);
@@ -144,7 +144,7 @@
             Controls.Add(MinValueLabel);
             Font = new Font("Segoe UI", 16F);
             Margin = new Padding(5, 6, 5, 6);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Number suggester";
             Load += Form1_Load;
             ResumeLayout(false);
